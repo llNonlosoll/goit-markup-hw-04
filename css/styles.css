@@ -114,7 +114,10 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
 .list.work,
 .list.team,
 .selector,
-.gallery-list {
+.gallery-list,
+.list.social,
+.social-link,
+.list.customers {
   display: flex;
 }
 
@@ -192,6 +195,16 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
 .hero {
   padding-top: 192px;
   padding-bottom: 192px;
+  min-height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero .title {
@@ -238,6 +251,17 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
   padding-bottom: 120px;
 }
 
+.strengths-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 264px;
+  height: 112px;
+  margin-bottom: 8px;
+
+  background-color: var(--third-color);
+}
+
 .section.work {
   padding-top: 0;
 }
@@ -256,6 +280,15 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
   text-align: center;
   padding-top: 32px;
   padding-bottom: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.list.social {
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .section.team {
@@ -269,13 +302,31 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
 }
 
 .section-work-title,
-.section-team-title {
+.section-team-title,
+.section-customers-title {
   text-align: center;
   margin-bottom: 72px;
 
   color: var(--secondary-color);
   font-size: 36px;
   line-height: 1.11;
+}
+
+.section-customers-title {
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
+.list.customers {
+  justify-content: space-between;
+}
+
+.customer-link {
+  display: block;
+  width: 168px;
+  height: 88px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
 }
 
 /*---------- Portfolio ----------*/
