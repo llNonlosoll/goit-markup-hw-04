@@ -4,10 +4,16 @@
   --third-color: #f4f4fd; /*cloud*/
   --main-text-color: #434455; /*slate*/
   --secondary-text-color: #e7e9fc; /*Cornflower*/
+  --third-text-color: #8e8f99;
   --accent: #4d5ae5; /*iris*/
   --accent-secondary: #404bbf;
+  --social-media-bgc: rgba(255, 255, 255, 0.1);
+  --social-media-accent: #31d0aa;
   --gap24: 24px;
   --gap48: 48px;
+  --shadow-hero-button: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --shadow-selector-button: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   --shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 1px 6px rgba(46, 47, 66, 0.08);
   --shadow-secondary: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -111,13 +117,17 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
 .header-nav,
 .main-nav,
 .list.strengths,
+.strengths-icon,
 .list.work,
 .list.team,
 .selector,
 .gallery-list,
 .list.social,
 .social-link,
-.list.customers {
+.list.customers,
+.footer .container,
+.list-social-media,
+.list-social-media-link {
   display: flex;
 }
 
@@ -191,6 +201,38 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
   color: var(--secondary-text-color);
 }
 
+.footer-social-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main-color);
+}
+
+.list-social-media {
+  justify-content: space-between;
+}
+
+.footer-right {
+  width: 208px;
+  margin-left: 120px;
+  padding: 0;
+}
+
+.list-social-media-link {
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--social-media-bgc);
+}
+
+.list-social-media-link:hover,
+.list-social-media-link:focus {
+  background-color: var(--social-media-accent);
+}
+
 /*---------- Index.html ----------*/
 .hero {
   padding-top: 192px;
@@ -233,12 +275,14 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
   letter-spacing: 0.04em;
 
   cursor: pointer;
+  box-shadow: var(--shadow-hero-button);
 }
 
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--accent);
   color: var(--main-color);
+  box-shadow: var(--shadow-secondary);
 }
 
 .hero-button:active {
@@ -252,7 +296,6 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
 }
 
 .strengths-icon {
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 264px;
@@ -325,8 +368,20 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
   display: block;
   width: 168px;
   height: 88px;
-  border: 1px solid #8e8f99;
+  border: 1px solid var(--third-text-color);
   border-radius: 4px;
+
+  color: var(--third-text-color);
+}
+
+.customer-link:hover,
+.customer-link:focus {
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.client-icon {
+  fill: currentColor;
 }
 
 /*---------- Portfolio ----------*/
@@ -364,6 +419,7 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
   background-color: var(--accent);
   color: var(--main-color);
   border: 1px solid transparent;
+  box-shadow: var(--shadow-selector-button);
 }
 
 .list.selector {
@@ -386,11 +442,16 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
   overflow: hidden;
 }
 
+.gallery-list .item:hover {
+  box-shadow: var(--shadow-secondary);
+}
+
 .gallery-item-text {
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 16px;
   border: 0.5px solid var(--third-color);
+  border-top: none;
 }
 
 .link p {
