@@ -125,6 +125,7 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
 .list.social,
 .social-link,
 .list.customers,
+.customer-link,
 .footer .container,
 .list-social-media,
 .list-social-media-link {
@@ -365,7 +366,8 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
 }
 
 .customer-link {
-  display: block;
+  justify-content: center;
+  align-items: center;
   width: 168px;
   height: 88px;
   border: 1px solid var(--third-text-color);
