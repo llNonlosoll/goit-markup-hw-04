@@ -122,14 +122,26 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
 .list.team,
 .selector,
 .gallery-list,
-.list.social,
-.social-link,
 .list.customers,
 .customer-link,
 .footer .container,
 .list-social-media,
 .list-social-media-link {
   display: flex;
+}
+
+.list-social-media-link {
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: var(--third-color);
+  background-color: var(--social-media-bgc);
+}
+
+.social-media-icon {
+  fill: currentColor;
 }
 
 /*---------- Header ----------*/
@@ -224,15 +236,6 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
   padding: 0;
 }
 
-.list-social-media-link {
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  background-color: var(--social-media-bgc);
-}
-
 .list-social-media-link:hover,
 .list-social-media-link:focus {
   background-color: var(--social-media-accent);
@@ -324,6 +327,10 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
   width: 264px;
 }
 
+.section.team {
+  background-color: var(--third-color);
+}
+
 .team-item-text {
   text-align: center;
   padding-top: 32px;
@@ -332,15 +339,14 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
   padding-right: 16px;
 }
 
-.list.social {
-  justify-content: space-between;
+.team .list-social-media-link {
+  background-color: var(--accent);
+}
+
+.team .list-social-media {
   margin-top: 8px;
   padding-top: 4px;
   padding-bottom: 4px;
-}
-
-.section.team {
-  background-color: var(--third-color);
 }
 
 .list.team .item {
